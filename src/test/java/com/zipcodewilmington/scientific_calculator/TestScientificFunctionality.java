@@ -1,15 +1,19 @@
-package ScientificCalculator.Maven.src.test.java.com.zipcodewilmington.scientific_calculator;
+
+package com.zipcodewilmington.scientific_calculator;
 
 
+import com.zipcodewilmington.scientificcalculator.ScientificFunctionality;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class TestScientificFunctionality {
+
+    ScientificFunctionality sciFunction = new ScientificFunctionality();
     @Test
     public void testCalcLog() {
-        double expected = 0.60205999132;
+        double expected = 0.6020599913279624;
         double input = 4;
-        double actual = ScientificFunctionality.calcLog(input);
+        double actual = sciFunction.calcLog(input);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -17,32 +21,33 @@ public class TestScientificFunctionality {
     public void testCalcInverseLog() {
         double expected = 1000;
         double input = 3;
-        double actual = ScientificFunctionality.calcInverseLog(input);
+        double actual = sciFunction.calcInverseLog(input);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void testCalcNaturalLog() {
-        double expected = 1.60943791243;
+        double expected = 1.6094379124341003;
         double input = 5;
-        double actual = ScientificFunctionality.calcNaturalLog(input);
+        double actual = sciFunction.calcNaturalLog(input);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void testCalcInverseNaturalLog() {
-        double expected = 20.0855369232;
+
+        double expected = 20.085536923187668;
         double input = 3;
-        double actual = ScientificFunctionality.calcInverseNaturalLog(input);
+        double actual = sciFunction.calcInverseNaturalLog(input);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void testCalcSine() {
-        double expected = 0.8414709848;
+        double expected = 0;
         //input in radians
-        double input = 1;
-        double actual = ScientificFunctionality.calcSine(input);
+        double input = 0;
+        double actual = sciFunction.calcSine(input);
         Assertions.assertEquals(expected, actual);
     }
 
@@ -51,43 +56,49 @@ public class TestScientificFunctionality {
         double expected = 0.87758256189;
         //input in radians
         double input = 0.5;
-        double actual = ScientificFunctionality.calcCoSine(input);
+        double actual = sciFunction.calcCoSine(input);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void testCalcTangent() {
-        double expected = 1.55740772465;
+        double expected = 0.54630248984;
         //input in radians
-        double input =1 ;
-        double actual = ScientificFunctionality.calcTangent(input);
+        double input =0.5;
+        double actual = sciFunction.calcTangent(input);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void testCalcInverseSine() {
-        double expected = 0.52359877559;
+        double expected = 0;
         //input in radians
-        double input = 0.5;
-        double actual = ScientificFunctionality.calcInverseCosine(input);
+        double input = 0;
+        double actual = sciFunction.calcInverseCosine(input);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void testCalcInverseCosine() {
-        double expected = 0;
+        double expected = 1.5707963267948966;
         //input in radians
-        double input = 1;
-        double actual = ScientificFunctionality.calcInverseCosine(input);
+        double input = 0;
+        double actual = sciFunction.calcInverseCosine(input);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     public void testCalcInverseTangent() {
-        double expected = 1.10714871779;
+        double expected = 0.78539816339;
         //input in radians
-        double input = 2;
-        double actual = ScientificFunctionality.calcInverseTangent(input);
+        double input = 1;
+        double actual = sciFunction.calcInverseTangent(input);
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void testSwitchUnitsMode(){
+        String expected = "Degrees";
+
+    }
+
 }
