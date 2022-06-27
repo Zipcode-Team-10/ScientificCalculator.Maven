@@ -37,25 +37,25 @@ public class MainApplication {
                     screen = 0;
                     Console.println("Answer: %s", screen);
                     break;
-                case "add":
+                case "+":
                     System.out.println("Enter number: ");
                     double num2 = input.nextDouble();
                     screen = bc.add(screen, num2);
                     Console.println("Answer: %s", screen);
                     break;
-                case "subtract":
+                case "-":
                     System.out.println("Enter number: ");
                     num2 = input.nextDouble();
                     screen = bc.subtract(screen, num2);
                     Console.println("Answer: %s", screen);
                     break;
-                case "multiply":
+                case "*":
                     System.out.println("Enter number: ");
                     num2 = input.nextDouble();
                     screen = bc.multiply(screen, num2);
                     Console.println("Answer: %s", screen);
                     break;
-                case "divide":
+                case "/":
                     System.out.println("Enter number: ");
                     num2 = input.nextDouble();
                     if (num2 == 0) {
@@ -65,7 +65,7 @@ public class MainApplication {
                         Console.println("Answer: %s", screen);
                     }
                     break;
-                case "modulus":
+                case "%":
                     System.out.println("Enter number: ");
                     num2 = input.nextDouble();
                     if (num2 == 0) {
